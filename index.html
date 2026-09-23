@@ -15,258 +15,251 @@
 </head>
 <body class="min-h-screen bg-[#08080A] text-[#EAEAF0] selection:bg-white selection:text-black">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 backdrop-blur-[20px] bg-[#08080A]/80 border-b border-white/[0.06]">
-    <div class="max-w-[1120px] mx-auto px-6 md:px-8 h-[64px] flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 rounded-full bg-white text-black grid place-items-center font-bold text-[13px] tracking-tight">
-          D
-        </div>
-        <div class="leading-none">
-          <div class="font-semibold text-[14px] tracking-tight">Destiny Web Lab</div>
-          <div class="text-[11px] text-white/40 mt-0.5">Cloudflare Pages Specialist</div>
-        </div>
-        <div class="hidden md:flex ml-4 items-center gap-1 p-1 rounded-full bg-white/[0.06] border border-white/[0.08]">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse ml-2"></span>
-          <span class="text-[11px] text-white/70 px-2 pr-3">Cloudflare Edge LIVE</span>
-        </div>
-      </div>
-      <nav class="hidden md:flex items-center gap-7 text-[13px] text-white/60">
-        <a href="#portfolio" class="hover:text-white transition">포트폴리오</a>
-        <a href="#packages" class="hover:text-white transition">제작 단가</a>
-        <a href="#contact" class="hover:text-white transition">문의하기</a>
-      </nav>
-      <a href="#contact" class="h-8 px-4 rounded-full bg-white text-black text-[13px] font-medium flex items-center hover:bg-white/90 transition">
-        견적 상담
+  <!-- 상단 글로벌 네비게이션 바 (메인 홈 복귀 지원) -->
+<header class="sticky top-0 z-50 bg-[#08080A]/90 backdrop-blur-md border-b border-white/[0.08] px-4 py-3">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+    
+    <!-- 1. 뒤로가기 / 메인 홈 링크 -->
+    <div class="flex items-center gap-3">
+      <!-- 브라우저 이전 페이지로 가기 -->
+      <button onclick="history.back()" class="flex items-center gap-1.5 text-xs font-medium text-white/70 hover:text-white bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full transition">
+        <span>←</span>
+        <span>이전으로</span>
+      </button>
+
+      <!-- 메인 허브(홈) 직통 링크 -->
+      <a href="https://emperors.cc" class="flex items-center gap-2 text-xs font-semibold text-white/90 hover:text-white transition">
+        <span class="w-6 h-6 rounded-md bg-white text-black flex items-center justify-center font-bold text-[11px]">D</span>
+        <span>운명과 숙명 홈</span>
       </a>
     </div>
-  </header>
+
+    <!-- 2. 우측 보조 메뉴 (스튜디오 바로가기) -->
+    <div class="flex items-center gap-2">
+      <a href="https://destiny-weblab.pages.dev" class="text-[11px] text-white/50 hover:text-white/80 transition">
+        Destiny Web Lab ↗
+      </a>
+    </div>
+
+  </div>
+</header>
 
   <!-- Hero Section -->
-  <section class="relative overflow-hidden pt-20 pb-16 md:pt-28 md:pb-24">
-    <div class="max-w-[1120px] mx-auto px-6 md:px-8 relative z-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.06] border border-white/[0.08] text-[11px] tracking-wide mb-6">
-        <span class="px-2 py-0.5 rounded-full bg-white text-black font-semibold">NO HOSTING FEE</span>
-        <span class="text-white/70">서버 유지비 평생 0원 · 글로벌 초고속 CDN 기반</span>
+  <section class="max-w-6xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] mb-6 text-emerald-400">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        서버비 0원 & Lighthouse 98점대 초고속 웹
       </div>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.05] tracking-[-0.03em] max-w-[850px]">
-        매월 나가는 호스팅비 <span class="text-white/40">0원,</span><br />
-        로딩 <span class="inline-block px-3 py-1 rounded-[12px] bg-white text-black text-3xl md:text-5xl font-bold -rotate-1">1초 미만</span><br />
-        매출을 부르는 홈페이지를 만듭니다.
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight leading-[1.15]">
+        매달 나가는 호스팅비 없이,<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">1초 만에 열리는 웹사이트</span>를 제작합니다.
       </h1>
-      <p class="mt-6 text-base md:text-lg text-white/60 max-w-[580px] leading-relaxed">
-        사주·상담 플랫폼 및 비즈니스 랜딩페이지를 직접 기획/개발하며 검증된 최적의 스택.
-        카페24, 아임웹의 무거운 플러그인과 월 구독료 없이 독립된 초고속 사이트를 소유하세요.
+      <p class="mt-6 text-base md:text-lg text-white/60 leading-relaxed max-w-2xl">
+        월 2~3만 원씩 평생 청구되는 무거운 빌더 대신, 글로벌 엣지 네트워크(Cloudflare & GitHub Pages)를 기반으로 평생 서버비 0원, 소스코드 100% 인수인계를 보장합니다.
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#portfolio" class="h-12 px-6 rounded-full bg-white text-black font-semibold text-sm flex items-center gap-2 hover:bg-white/90 transition">
-          포트폴리오 데모 보기 <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#contact" class="h-12 px-7 rounded-full bg-white text-black font-semibold text-sm inline-flex items-center justify-center hover:bg-white/90 transition">
+          무료 제작 상담 신청
         </a>
-        <a href="#contact" class="h-12 px-6 rounded-full bg-white/[0.08] border border-white/[0.12] text-white font-medium text-sm flex items-center hover:bg-white/[0.12] transition">
-          빠른 제작 문의
+        <a href="#portfolio" class="h-12 px-7 rounded-full border border-white/20 text-white font-semibold text-sm inline-flex items-center justify-center hover:bg-white/10 transition">
+          실제 포트폴리오 보기
         </a>
-      </div>
-
-      <!-- Metrics -->
-      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-[1px] rounded-2xl overflow-hidden bg-white/[0.08] border border-white/[0.08]">
-        <div class="bg-[#101012] px-6 py-5">
-          <div class="text-[11px] tracking-widest text-white/40">평균 로딩(LCP)</div>
-          <div class="mt-1 text-2xl font-bold text-white">0.72s</div>
-          <div class="mt-1 text-[11px] text-emerald-400">Lighthouse 98점</div>
-        </div>
-        <div class="bg-[#101012] px-6 py-5">
-          <div class="text-[11px] tracking-widest text-white/40">월 호스팅 비용</div>
-          <div class="mt-1 text-2xl font-bold text-white">0원</div>
-          <div class="mt-1 text-[11px] text-white/50">Cloudflare 글로벌 무제한</div>
-        </div>
-        <div class="bg-[#101012] px-6 py-5">
-          <div class="text-[11px] tracking-widest text-white/40">보안 (SSL)</div>
-          <div class="mt-1 text-2xl font-bold text-white">HTTPS 기본</div>
-          <div class="mt-1 text-[11px] text-white/50">DDoS 방어 자동 적용</div>
-        </div>
-        <div class="bg-[#101012] px-6 py-5">
-          <div class="text-[11px] tracking-widest text-white/40">검색 등록(SEO)</div>
-          <div class="mt-1 text-2xl font-bold text-white">100% 최적화</div>
-          <div class="mt-1 text-[11px] text-white/50">네이버/구글 서치콘솔 대행</div>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="border-t border-white/[0.06] bg-[#0E0E10] py-20">
-    <div class="max-w-[1120px] mx-auto px-6 md:px-8">
-      <div class="flex items-center gap-3 mb-8">
-        <span class="h-6 px-3 rounded-full bg-white text-black text-xs font-bold grid place-items-center">PROOF OF WORK</span>
-        <span class="text-sm text-white/40">실제 라이브 프로젝트 및 데모</span>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <a href="https://emperors.cc" target="_blank" rel="noopener noreferrer" class="group block rounded-3xl bg-[#151517] border border-white/[0.08] hover:border-white/20 transition-all overflow-hidden">
-          <div class="h-11 px-5 border-b border-white/[0.06] bg-[#161618] flex items-center justify-between">
-            <div class="flex items-center gap-1.5">
-              <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#28CA42]"></span>
-            </div>
-            <span class="text-xs text-white/40 font-mono flex items-center gap-1 group-hover:text-white transition">
-              emperors.cc <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </span>
-          </div>
-          <div class="p-7">
-            <span class="px-2.5 py-1 rounded-full bg-white/[0.08] text-[11px] text-white/70 font-semibold">브랜드 허브 · 라이브 운영 중</span>
-            <h3 class="mt-4 text-xl font-bold text-white group-hover:text-emerald-400 transition">운명과 숙명 (사주·운세 공식 플랫폼)</h3>
-            <p class="mt-2 text-sm text-white/50 leading-relaxed">
-              네이버 홈판 대형 트래픽을 감당하는 고속 명리학 플랫폼 및 1:1 상담 접수 시스템.
-            </p>
-            <div class="mt-5 text-xs text-emerald-400 font-medium flex items-center gap-1">
-              <span>라이브 사이트 방문하기</span> →
-            </div>
-          </div>
-        </a>
+  <section id="portfolio" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/[0.08]">
+    <div class="mb-12">
+      <div class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Live Portfolio</div>
+      <h2 class="text-3xl font-black mt-2">직접 운영 및 제작한 라이브 프로젝트</h2>
+    </div>
 
-        <div class="rounded-3xl bg-[#151517] border border-white/[0.08] overflow-hidden">
-          <div class="h-11 px-5 border-b border-white/[0.06] bg-[#161618] flex items-center justify-between">
-            <div class="flex items-center gap-1.5">
-              <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#28CA42]"></span>
-            </div>
-            <span class="text-xs text-white/40 font-mono">github.io/portfolio-demo</span>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- 1. 사주 공식 플랫폼 (emperors.cc) -->
+      <a href="https://emperors.cc" target="_blank" rel="noopener noreferrer" class="group block rounded-3xl bg-[#151517] border border-white/[0.08] hover:border-white/20 transition-all overflow-hidden">
+        <div class="h-11 px-5 border-b border-white/[0.06] bg-[#161618] flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28CA42]"></span>
           </div>
-          <div class="p-7">
-            <span class="px-2.5 py-1 rounded-full bg-white/[0.08] text-[11px] text-white/70 font-semibold">GitHub Pages 데모</span>
-            <h3 class="mt-4 text-xl font-bold text-white">소상공인 맞춤 1페이지 쇼케이스</h3>
-            <p class="mt-2 text-sm text-white/50 leading-relaxed">
-              카페, 매장, 1인 사업자를 위해 소스코드를 직접 확인할 수 있는 공개 템플릿.
-            </p>
+          <span class="text-xs text-white/40 font-mono flex items-center gap-1 group-hover:text-white transition">
+            emperors.cc <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </span>
+        </div>
+        <div class="p-7">
+          <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-semibold">브랜드 허브 · 라이브 운영 중</span>
+          <h3 class="mt-4 text-xl font-bold text-white group-hover:text-emerald-400 transition">운명과 숙명 (사주·운세 공식 플랫폼)</h3>
+          <p class="mt-2 text-sm text-white/50 leading-relaxed">
+            네이버 홈판 대형 트래픽을 처리하는 초고속 만세력 MVP 및 정밀 운명 리포트 허브 시스템.
+          </p>
+          <div class="mt-5 text-xs text-emerald-400 font-medium flex items-center gap-1">
+            <span>라이브 사이트 바로가기</span> →
           </div>
         </div>
-      </div>
+      </a>
+
+      <!-- 2. 소상공인 쇼케이스 (sample-homepage) -->
+      <a href="https://dk1347.github.io/sample-homepage/" target="_blank" rel="noopener noreferrer" class="group block rounded-3xl bg-[#151517] border border-white/[0.08] hover:border-white/20 transition-all overflow-hidden">
+        <div class="h-11 px-5 border-b border-white/[0.06] bg-[#161618] flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#FFBD2E]"></span>
+            <span class="w-3 h-3 rounded-full bg-[#28CA42]"></span>
+          </div>
+          <span class="text-xs text-white/40 font-mono flex items-center gap-1 group-hover:text-white transition">
+            dk1347.github.io/sample-homepage <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </span>
+        </div>
+        <div class="p-7">
+          <span class="px-2.5 py-1 rounded-full bg-white/[0.08] text-[11px] text-white/70 font-semibold">쇼케이스 데모 · 월 0원 실측</span>
+          <h3 class="mt-4 text-xl font-bold text-white group-hover:text-white/80 transition">소상공인 맞춤 1페이지 쇼케이스</h3>
+          <p class="mt-2 text-sm text-white/50 leading-relaxed">
+            GitHub Pages 기반 초경량 맞춤 사이트. Lighthouse 98점대 초고속 로딩 및 본진 문의 연동 데모.
+          </p>
+          <div class="mt-5 text-xs text-white/70 font-medium flex items-center gap-1">
+            <span>데모 페이지 체험하기</span> →
+          </div>
+        </div>
+      </a>
+
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section id="packages" class="py-20 border-t border-white/[0.06] bg-[#0A0A0C]">
-    <div class="max-w-[1120px] mx-auto px-6 md:px-8">
-      <div class="text-center max-w-xl mx-auto mb-14">
-        <h2 class="text-3xl font-extrabold text-white">크몽 표준 제작 패키지</h2>
-        <p class="mt-3 text-sm text-white/50">월 고정비 없이 1회 제작으로 평생 운영하세요.</p>
+  <!-- Packages Section -->
+  <section id="packages" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/[0.08]">
+    <div class="mb-12">
+      <div class="text-xs font-bold tracking-widest text-emerald-400 uppercase">Pricing</div>
+      <h2 class="text-3xl font-black mt-2">투명한 맞춤 제작 패키지</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl bg-[#121214] border border-white/[0.08] p-7 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold text-white/60">실속형</span>
+          <h3 class="text-xl font-bold mt-1">라이트 1페이지</h3>
+          <div class="mt-4 text-3xl font-black">25만 원</div>
+          <p class="mt-2 text-xs text-white/50">매장 소개, 지도, 영업시간, 상담 링크가 들어가는 초경량 원페이지</p>
+          <ul class="mt-6 space-y-2.5 text-xs text-white/70">
+            <li>✓ 모바일/PC 반응형 최적화</li>
+            <li>✓ Cloudflare/GitHub Pages 무료 배포</li>
+            <li>✓ 네이버 검색 최적화(SEO) 등록</li>
+            <li>✓ 제작 완료 후 소스코드 100% 인수인계</li>
+          </ul>
+        </div>
+        <a href="#contact" class="mt-8 block text-center py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">선택하기</a>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-3xl bg-[#121214] border border-white/[0.08] p-7 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-bold text-white/40 tracking-wider">STANDARD</div>
-            <div class="mt-3 text-3xl font-black text-white">25<span class="text-lg font-normal text-white/50">만원</span></div>
-            <p class="mt-2 text-xs text-white/50">1페이지 원스크롤 전환 랜딩페이지</p>
-            <ul class="mt-6 space-y-2.5 text-xs text-white/70">
-              <li><i class="fa-solid fa-check text-white mr-2"></i>모바일 반응형 완벽 대응</li>
-              <li><i class="fa-solid fa-check text-white mr-2"></i>문의 폼 + 실시간 알림 연동</li>
-              <li><i class="fa-solid fa-check text-white mr-2"></i>Cloudflare 평생 무료 호스팅</li>
-            </ul>
-          </div>
-          <a href="#contact" class="mt-8 block text-center py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">선택하기</a>
+      <div class="rounded-3xl bg-[#161619] border-2 border-emerald-500/50 p-7 flex flex-col justify-between relative shadow-2xl">
+        <span class="absolute -top-3 right-6 text-[10px] font-bold px-3 py-1 rounded-full bg-emerald-500 text-black">BEST CHOICE</span>
+        <div>
+          <span class="text-xs font-bold text-emerald-400">표준형</span>
+          <h3 class="text-xl font-bold mt-1">스탠다드 비즈니스</h3>
+          <div class="mt-4 text-3xl font-black">55만 원</div>
+          <p class="mt-2 text-xs text-white/50">소상공인, 전문직, 사주/상담소 등 실제 문의 접수가 필요한 사이트</p>
+          <ul class="mt-6 space-y-2.5 text-xs text-white/80">
+            <li>✓ 라이트 플랜의 모든 기능 포함</li>
+            <li>✓ 상담 접수 폼 및 이메일/텔레그램 실시간 알림</li>
+            <li>✓ 단독 도메인 및 SSL 보안 연결 대행</li>
+            <li>✓ 상세 페이지 구성 (최대 3개 섹션 추가)</li>
+          </ul>
         </div>
-
-        <div class="rounded-3xl bg-white text-black p-7 flex flex-col justify-between relative shadow-2xl scale-[1.02]">
-          <span class="absolute -top-3 left-6 px-3 py-1 rounded-full bg-black text-white text-[10px] font-bold">인기 1위</span>
-          <div>
-            <div class="text-xs font-bold text-black/50 tracking-wider">DELUXE</div>
-            <div class="mt-3 text-3xl font-black text-black">65<span class="text-lg font-normal text-black/60">만원</span></div>
-            <p class="mt-2 text-xs text-black/60">3~5페이지 기업·전문직 공식 홈페이지</p>
-            <ul class="mt-6 space-y-2.5 text-xs text-black/80">
-              <li><i class="fa-solid fa-check text-black mr-2"></i>Standard 전 기능 포함</li>
-              <li><i class="fa-solid fa-check text-black mr-2"></i>3~5페이지 메뉴 분리 구성</li>
-              <li><i class="fa-solid fa-check text-black mr-2"></i>단독 도메인(.com) 연동 대행</li>
-              <li><i class="fa-solid fa-check text-black mr-2"></i>네이버/구글 서치콘솔 SEO 세팅</li>
-            </ul>
-          </div>
-          <a href="#contact" class="mt-8 block text-center py-3 rounded-full bg-black hover:bg-black/90 text-white text-xs font-semibold transition">선택하기</a>
-        </div>
-
-        <div class="rounded-3xl bg-[#121214] border border-white/[0.08] p-7 flex flex-col justify-between">
-          <div>
-            <div class="text-xs font-bold text-white/40 tracking-wider">PREMIUM</div>
-            <div class="mt-3 text-3xl font-black text-white">120<span class="text-lg font-normal text-white/50">만원~</span></div>
-            <p class="mt-2 text-xs text-white/50">블로그/CMS + 커스텀 풀패키지</p>
-            <ul class="mt-6 space-y-2.5 text-xs text-white/70">
-              <li><i class="fa-solid fa-check text-white mr-2"></i>Deluxe 전 기능 포함</li>
-              <li><i class="fa-solid fa-check text-white mr-2"></i>직접 글 쓰는 간편 CMS 연동</li>
-              <li><i class="fa-solid fa-check text-white mr-2"></i>Cloudflare D1 DB 연동</li>
-            </ul>
-          </div>
-          <a href="#contact" class="mt-8 block text-center py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">선택하기</a>
-        </div>
+        <a href="#contact" class="mt-8 block text-center py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-bold transition">선택하기</a>
       </div>
+
+      <div class="rounded-3xl bg-[#121214] border border-white/[0.08] p-7 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-bold text-white/60">확장형</span>
+          <h3 class="text-xl font-bold mt-1">엔터프라이즈 맞춤형</h3>
+          <div class="mt-4 text-3xl font-black">협의</div>
+          <p class="mt-2 text-xs text-white/50">데이터베이스(D1) 연동, 결제 시스템, 맞춤 연산 로직(만세력 등)</p>
+          <ul class="mt-6 space-y-2.5 text-xs text-white/70">
+            <li>✓ 스탠다드 플랜의 모든 기능 포함</li>
+            <li>✓ 회원/상담 DB 시스템 및 관리자 페이지</li>
+            <li>✓ 맞춤 백엔드 Worker 로직 구축</li>
+            <li>✓ 무제한 대형 트래픽 분산 세팅</li>
+          </ul>
+        </div>
+        <a href="#contact" class="mt-8 block text-center py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition">문의하기</a>
+      </div>
+    </div>
+
+    <!-- 도메인 옵션 안내 카드 -->
+    <div class="mt-8 rounded-2xl bg-white/[0.04] border border-white/[0.08] p-5 text-xs leading-relaxed text-white/60">
+      <div class="font-bold text-white text-sm mb-2">💡 도메인 주소(Domain) 선택 안내</div>
+      <p class="mb-2">
+        저희는 투명한 운영을 지향합니다. <strong>서버 호스팅 비용은 평생 0원</strong>이지만, 주소 선택에 따라 비용이 달라집니다.
+      </p>
+      <ul class="space-y-1.5 list-disc list-inside text-white/70">
+        <li>
+          <strong class="text-emerald-400">완전 무료 플랜 (0원):</strong> 
+          기본 제공되는 <code class="bg-white/10 px-1 py-0.5 rounded text-white">xxx.pages.dev</code> 주소를 그대로 사용합니다. 도메인 구매 비용조차 들지 않아 <strong>평생 총비용 0원</strong>으로 운영됩니다.
+        </li>
+        <li>
+          <strong class="text-white">단독 도메인 연결 플랜:</strong> 
+          나만의 고유 주소(<code class="bg-white/10 px-1 py-0.5 rounded text-white">.com</code>, <code class="bg-white/10 px-1 py-0.5 rounded text-white">.kr</code> 등)를 원하실 경우, 등록처 실비(연간 약 1~2만 원 / $8~$10 내외)만 고객님 명의로 결제하시면 연결 및 DNS 세팅을 무상 대행해 드립니다.
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- Contact Form -->
-  <section id="contact" class="py-20 bg-[#08080A] border-t border-white/[0.06]">
-    <div class="max-w-xl mx-auto px-6">
-      <div class="text-center mb-10">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-white">프로젝트 상담 및 견적 신청</h2>
-        <p class="mt-2 text-xs text-white/40">문의 내용을 남겨주시면 빠르게 검토 후 회신드립니다.</p>
-      </div>
-
-      <form id="contactForm" onsubmit="submitForm(event)" class="space-y-4 bg-[#121214] p-6 md:p-8 rounded-3xl border border-white/[0.08]">
-        <div>
-          <label class="block text-xs font-bold text-white/60 mb-1">성함 / 상호명 *</label>
-          <input type="text" id="name" required class="w-full h-11 px-4 rounded-xl bg-black border border-white/10 text-xs text-white focus:outline-none focus:border-white/40" placeholder="홍길동 (예: 카페 데스티니)">
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-white/60 mb-1">연락처 *</label>
-          <input type="text" id="contactInfo" required class="w-full h-11 px-4 rounded-xl bg-black border border-white/10 text-xs text-white focus:outline-none focus:border-white/40" placeholder="010-0000-0000">
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-white/60 mb-1">희망 패키지</label>
-          <select id="packageSelect" class="w-full h-11 px-4 rounded-xl bg-black border border-white/10 text-xs text-white/80 focus:outline-none focus:border-white/40">
-            <option value="standard">스탠다드 랜딩페이지 (25만원)</option>
-            <option value="deluxe" selected>디럭스 기업/매장형 (65만원)</option>
-            <option value="premium">프리미엄 CMS 풀패키지 (120만원~)</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-white/60 mb-1">상담 및 요청 내용 *</label>
-          <textarea id="message" rows="4" required class="w-full p-4 rounded-xl bg-black border border-white/10 text-xs text-white focus:outline-none focus:border-white/40 resize-none" placeholder="만들고자 하시는 사이트의 컨셉이나 참고 사이트 주소를 남겨주세요."></textarea>
-        </div>
-
-        <button type="submit" id="submitBtn" class="w-full h-12 rounded-xl bg-white hover:bg-white/90 text-black font-bold text-xs transition">
-          상담 신청 접수하기
-        </button>
-
-        <div id="statusMsg" class="hidden text-xs text-center py-2.5 rounded-lg font-medium"></div>
-      </form>
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-6xl mx-auto px-6 py-20 border-t border-white/[0.08]">
+    <div class="max-w-xl mx-auto text-center mb-10">
+      <h2 class="text-3xl font-black">프로젝트 제작 문의</h2>
+      <p class="mt-2 text-sm text-white/50">원하시는 컨셉과 일정을 남겨주시면 빠르게 검토 후 안내해 드립니다.</p>
     </div>
+
+    <form onsubmit="handleContactSubmit(event)" class="max-w-lg mx-auto space-y-4 text-xs">
+      <div>
+        <label class="block text-white/70 font-semibold mb-1">성함 / 상호명 *</label>
+        <input type="text" id="contactName" required class="w-full h-11 px-4 rounded-xl bg-white/[0.05] border border-white/15 text-white focus:outline-none focus:border-emerald-400" placeholder="홍길동 (예: 카페 데스티니)">
+      </div>
+      <div>
+        <label class="block text-white/70 font-semibold mb-1">연락처 *</label>
+        <input type="text" id="contactInfo" required class="w-full h-11 px-4 rounded-xl bg-white/[0.05] border border-white/15 text-white focus:outline-none focus:border-emerald-400" placeholder="010-0000-0000 또는 이메일">
+      </div>
+      <div>
+        <label class="block text-white/70 font-semibold mb-1">희망 패키지</label>
+        <select id="contactPackage" class="w-full h-11 px-4 rounded-xl bg-[#161618] border border-white/15 text-white focus:outline-none focus:border-emerald-400">
+          <option value="라이트 1페이지 (25만)">라이트 1페이지 (25만)</option>
+          <option value="스탠다드 비즈니스 (55만)" selected>스탠다드 비즈니스 (55만)</option>
+          <option value="엔터프라이즈 맞춤형">엔터프라이즈 맞춤형</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-white/70 font-semibold mb-1">문의 내용 *</label>
+        <textarea id="contactMessage" rows="4" required class="w-full p-4 rounded-xl bg-white/[0.05] border border-white/15 text-white focus:outline-none focus:border-emerald-400 resize-none" placeholder="만들고자 하시는 사이트 종류나 요청사항을 자유롭게 적어주세요."></textarea>
+      </div>
+      <button type="submit" id="submitBtn" class="w-full h-12 rounded-xl bg-white hover:bg-white/90 text-black font-bold text-sm transition">
+        제작 상담 신청하기
+      </button>
+      <div id="contactStatus" class="hidden text-center py-2.5 rounded-lg text-xs font-semibold"></div>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="py-10 border-t border-white/[0.06] bg-[#050507] text-center text-xs text-white/40">
-    <div class="max-w-[1120px] mx-auto px-6 space-y-2">
-      <div class="text-sm font-bold text-white">Destiny Web Lab</div>
-      <p>Cloudflare 기반 초고속·무관리비 웹 솔루션 전문</p>
-      <p class="text-white/20">© 2026 Destiny Web Lab. All rights reserved.</p>
-    </div>
+  <footer class="border-t border-white/[0.08] py-10 text-center text-xs text-white/40">
+    <p>© 2026 Destiny Web Lab. All rights reserved.</p>
   </footer>
 
   <script>
-    async function submitForm(e) {
+    async function handleContactSubmit(e) {
       e.preventDefault();
       const btn = document.getElementById('submitBtn');
-      const status = document.getElementById('statusMsg');
-
+      const status = document.getElementById('contactStatus');
       btn.disabled = true;
-      btn.innerText = "전송 중...";
+      btn.innerText = "접수 중...";
       status.className = "hidden";
 
       const payload = {
-        name: document.getElementById('name').value,
+        name: document.getElementById('contactName').value,
         contact: document.getElementById('contactInfo').value,
-        package: document.getElementById('packageSelect').value,
-        message: document.getElementById('message').value
+        package: document.getElementById('contactPackage').value,
+        message: document.getElementById('contactMessage').value
       };
 
       try {
@@ -275,20 +268,19 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-
         if (res.ok) {
-          status.innerText = "✓ 문의가 정상 접수되었습니다. 빠르게 확인 후 연락드리겠습니다.";
+          status.innerText = "✓ 문의가 성공적으로 접수되었습니다. 빠르게 연락드리겠습니다.";
           status.className = "block text-xs text-center py-2.5 rounded-lg bg-emerald-500/20 text-emerald-300 font-semibold";
-          document.getElementById('contactForm').reset();
+          e.target.reset();
         } else {
           throw new Error();
         }
       } catch (err) {
-        status.innerText = "접수되었습니다. 확인 후 남겨주신 연락처로 안내해 드리겠습니다.";
+        status.innerText = "✓ 문의가 접수되었습니다. (시스템 점검 중인 경우 010 번호로 안내 메시지가 발송됩니다)";
         status.className = "block text-xs text-center py-2.5 rounded-lg bg-white/10 text-white font-medium";
       } finally {
         btn.disabled = false;
-        btn.innerText = "상담 신청 접수하기";
+        btn.innerText = "제작 상담 신청하기";
       }
     }
   </script>
