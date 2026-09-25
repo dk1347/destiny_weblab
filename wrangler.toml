@@ -1,0 +1,7 @@
+name = "destiny-weblab"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "destiny-db"
+database_id = "fc8e9888-3a6a-4236-adcb-7fa437e024f6"

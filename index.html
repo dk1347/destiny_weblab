@@ -246,7 +246,7 @@
     <p>© 2026 Destiny Web Lab. All rights reserved.</p>
   </footer>
 
-  <script>
+    <script>
     async function handleContactSubmit(e) {
       e.preventDefault();
       const btn = document.getElementById('submitBtn');
@@ -259,7 +259,9 @@
         name: document.getElementById('contactName').value,
         contact: document.getElementById('contactInfo').value,
         package: document.getElementById('contactPackage').value,
-        message: document.getElementById('contactMessage').value
+        message: document.getElementById('contactMessage').value,
+        timestamp: new Date().toISOString(),
+        page: location.href
       };
 
       try {
@@ -268,16 +270,20 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
+        const data = await res.json().catch(async () => ({ error: await res.text() }));
         if (res.ok) {
-          status.innerText = "✓ 문의가 성공적으로 접수되었습니다. 빠르게 연락드리겠습니다.";
+          status.innerText = "✓ 문의가 성공적으로 접수되었습니다. D1에 저장됨.";
           status.className = "block text-xs text-center py-2.5 rounded-lg bg-emerald-500/20 text-emerald-300 font-semibold";
           e.target.reset();
         } else {
-          throw new Error();
+          // F12 Response에 뜨는 에러를 화면에도 그대로 표시
+          status.innerText = "✗ 실패 [" + res.status + "] " + (data.error || JSON.stringify(data));
+          status.className = "block text-xs text-center py-2.5 rounded-lg bg-red-500/20 text-red-300 font-semibold whitespace-pre-wrap";
         }
       } catch (err) {
-        status.innerText = "✓ 문의가 접수되었습니다. (시스템 점검 중인 경우 010 번호로 안내 메시지가 발송됩니다)";
-        status.className = "block text-xs text-center py-2.5 rounded-lg bg-white/10 text-white font-medium";
+        status.innerText = "✗ 네트워크 오류: " + err.message + "
+F12 > Network > contact > Response 탭 확인 필요";
+        status.className = "block text-xs text-center py-2.5 rounded-lg bg-red-500/20 text-red-300 font-semibold whitespace-pre-wrap";
       } finally {
         btn.disabled = false;
         btn.innerText = "제작 상담 신청하기";
